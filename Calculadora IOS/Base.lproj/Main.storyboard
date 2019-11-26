@@ -1,24 +1,211 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Calculadora View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CalculadoraViewController" customModule="Calculadora_IOS" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123456789012" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pcQ-d6-coP">
+                                <rect key="frame" x="16" y="36" width="343" height="62"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="B5P-tJ-zKl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="47"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="epp-31-kLH">
+                                <rect key="frame" x="12" y="110" width="351" height="545"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="KVt-xU-nOp">
+                                        <rect key="frame" x="0.0" y="0.0" width="351" height="109"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="enk-b0-KzT">
+                                                <rect key="frame" x="0.0" y="0.0" width="88" height="109"/>
+                                                <state key="normal" title="C"/>
+                                                <connections>
+                                                    <action selector="cancelarOperacion" destination="BYZ-38-t0r" eventType="touchDown" id="wfi-jC-NG7"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1hs-rU-qjB">
+                                                <rect key="frame" x="88" y="0.0" width="87.5" height="109"/>
+                                                <state key="normal" title="Atrás"/>
+                                                <connections>
+                                                    <action selector="cancelarEntrada" destination="BYZ-38-t0r" eventType="touchDown" id="uMG-z8-Ulk"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1U-3G-hbo">
+                                                <rect key="frame" x="175.5" y="0.0" width="88" height="109"/>
+                                                <state key="normal" title="*"/>
+                                                <connections>
+                                                    <action selector="presionaBotonOperacion" destination="BYZ-38-t0r" eventType="touchDown" id="NhZ-Tj-Xdy"/>
+                                                    <action selector="presionaBotonOperacion:" destination="BYZ-38-t0r" eventType="touchDown" id="5sT-2s-xI5"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gRK-aU-MTP">
+                                                <rect key="frame" x="263.5" y="0.0" width="87.5" height="109"/>
+                                                <state key="normal" title="/"/>
+                                                <connections>
+                                                    <action selector="presionaBotonOperacion:" destination="dkx-z0-nzr" eventType="touchDown" id="QKB-yO-9Tz"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="3Jf-35-WGp">
+                                        <rect key="frame" x="0.0" y="109" width="351" height="109"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QBP-OO-t10">
+                                                <rect key="frame" x="0.0" y="0.0" width="88" height="109"/>
+                                                <state key="normal" title="7"/>
+                                                <connections>
+                                                    <action selector="presionaBotonNumero:" destination="BYZ-38-t0r" eventType="touchDown" id="vxj-0r-K8S"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AlO-ni-cRx">
+                                                <rect key="frame" x="88" y="0.0" width="87.5" height="109"/>
+                                                <state key="normal" title="8"/>
+                                                <connections>
+                                                    <action selector="presionaBotonNumero:" destination="dkx-z0-nzr" eventType="touchDown" id="Ato-rr-1d0"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DuS-ez-wsz">
+                                                <rect key="frame" x="175.5" y="0.0" width="88" height="109"/>
+                                                <state key="normal" title="9"/>
+                                                <connections>
+                                                    <action selector="presionaBotonNumero:" destination="dkx-z0-nzr" eventType="touchDown" id="uIZ-jh-sZ9"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kg2-05-bEG">
+                                                <rect key="frame" x="263.5" y="0.0" width="87.5" height="109"/>
+                                                <state key="normal" title="-"/>
+                                                <connections>
+                                                    <action selector="presionaBotonOperacion:" destination="dkx-z0-nzr" eventType="touchDown" id="GSL-f7-QpM"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="5fw-kh-UbY">
+                                        <rect key="frame" x="0.0" y="218" width="351" height="109"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5mQ-xp-u5M">
+                                                <rect key="frame" x="0.0" y="0.0" width="88" height="109"/>
+                                                <state key="normal" title="4"/>
+                                                <connections>
+                                                    <action selector="presionaBotonNumero:" destination="dkx-z0-nzr" eventType="touchDown" id="mV0-7v-4qR"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FnJ-jP-Z7F">
+                                                <rect key="frame" x="88" y="0.0" width="87.5" height="109"/>
+                                                <state key="normal" title="5"/>
+                                                <connections>
+                                                    <action selector="presionaBotonNumero:" destination="dkx-z0-nzr" eventType="touchDown" id="Jdr-km-xlW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0I9-gb-FJm">
+                                                <rect key="frame" x="175.5" y="0.0" width="88" height="109"/>
+                                                <state key="normal" title="6"/>
+                                                <connections>
+                                                    <action selector="presionaBotonNumero:" destination="dkx-z0-nzr" eventType="touchDown" id="TMg-og-ryB"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sjb-gV-bgb">
+                                                <rect key="frame" x="263.5" y="0.0" width="87.5" height="109"/>
+                                                <state key="normal" title="+"/>
+                                                <connections>
+                                                    <action selector="presionaBotonOperacion:" destination="dkx-z0-nzr" eventType="touchDown" id="wej-w7-wVV"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hvF-qE-Cf0">
+                                        <rect key="frame" x="0.0" y="327" width="351" height="109"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dcx-RP-zKd">
+                                                <rect key="frame" x="0.0" y="0.0" width="88" height="109"/>
+                                                <state key="normal" title="1"/>
+                                                <connections>
+                                                    <action selector="presionaBotonNumero:" destination="dkx-z0-nzr" eventType="touchDown" id="xh4-fX-yGy"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RnK-LA-8Dx">
+                                                <rect key="frame" x="88" y="0.0" width="87.5" height="109"/>
+                                                <state key="normal" title="2"/>
+                                                <connections>
+                                                    <action selector="presionaBotonNumero:" destination="dkx-z0-nzr" eventType="touchDown" id="zHc-F3-mJI"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oi-8U-esi">
+                                                <rect key="frame" x="175.5" y="0.0" width="88" height="109"/>
+                                                <state key="normal" title="3"/>
+                                                <connections>
+                                                    <action selector="presionaBotonNumero:" destination="dkx-z0-nzr" eventType="touchDown" id="aHA-lF-LRz"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xya-lv-ldo">
+                                                <rect key="frame" x="263.5" y="0.0" width="87.5" height="109"/>
+                                                <state key="normal" title="="/>
+                                                <connections>
+                                                    <action selector="presionaBotonOperacion:" destination="dkx-z0-nzr" eventType="touchDown" id="iak-Fy-bQF"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="iDI-wW-Cc2">
+                                        <rect key="frame" x="0.0" y="436" width="351" height="109"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DkE-FN-3jX">
+                                                <rect key="frame" x="0.0" y="0.0" width="117" height="109"/>
+                                                <state key="normal" title="+/-"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9AS-jL-Fb8">
+                                                <rect key="frame" x="117" y="0.0" width="117" height="109"/>
+                                                <state key="normal" title="0"/>
+                                                <connections>
+                                                    <action selector="presionaBotonNumero:" destination="dkx-z0-nzr" eventType="touchDown" id="WD5-dp-Hbv"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ug7-Ha-GZa">
+                                                <rect key="frame" x="234" y="0.0" width="117" height="109"/>
+                                                <state key="normal" title=","/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="epp-31-kLH" secondAttribute="bottom" constant="12" id="33i-jm-YAK"/>
+                            <constraint firstItem="epp-31-kLH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="OUF-EY-19N"/>
+                            <constraint firstItem="epp-31-kLH" firstAttribute="top" secondItem="pcQ-d6-coP" secondAttribute="bottom" constant="12" id="TUW-hF-S01"/>
+                            <constraint firstItem="pcQ-d6-coP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="Wnt-5w-EPZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="epp-31-kLH" secondAttribute="trailing" constant="12" id="beR-2n-mu0"/>
+                            <constraint firstItem="pcQ-d6-coP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="hKN-Qx-Gbb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pcQ-d6-coP" secondAttribute="trailing" constant="16" id="hgY-Jd-tsL"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="textoEnPantalla" destination="pcQ-d6-coP" id="e8R-xg-MRL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>

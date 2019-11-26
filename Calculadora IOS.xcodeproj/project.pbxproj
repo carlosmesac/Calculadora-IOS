@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		FB2749B7238D50B00002199B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2749B6238D50B00002199B /* AppDelegate.swift */; };
-		FB2749B9238D50B00002199B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2749B8238D50B00002199B /* ViewController.swift */; };
+		FB2749B9238D50B00002199B /* CalculadoraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2749B8238D50B00002199B /* CalculadoraViewController.swift */; };
 		FB2749BC238D50B00002199B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB2749BA238D50B00002199B /* Main.storyboard */; };
 		FB2749BE238D50B10002199B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB2749BD238D50B10002199B /* Assets.xcassets */; };
 		FB2749C1238D50B10002199B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB2749BF238D50B10002199B /* LaunchScreen.storyboard */; };
+		FB2749CB238D58370002199B /* CalculadoraModelo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2749CA238D58370002199B /* CalculadoraModelo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FB2749B3238D50B00002199B /* Calculadora IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Calculadora IOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB2749B6238D50B00002199B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FB2749B8238D50B00002199B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FB2749B8238D50B00002199B /* CalculadoraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculadoraViewController.swift; sourceTree = "<group>"; };
 		FB2749BB238D50B00002199B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FB2749BD238D50B10002199B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB2749C0238D50B10002199B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB2749C2238D50B10002199B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB2749CA238D58370002199B /* CalculadoraModelo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculadoraModelo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +57,12 @@
 			isa = PBXGroup;
 			children = (
 				FB2749B6238D50B00002199B /* AppDelegate.swift */,
-				FB2749B8238D50B00002199B /* ViewController.swift */,
+				FB2749B8238D50B00002199B /* CalculadoraViewController.swift */,
 				FB2749BA238D50B00002199B /* Main.storyboard */,
 				FB2749BD238D50B10002199B /* Assets.xcassets */,
 				FB2749BF238D50B10002199B /* LaunchScreen.storyboard */,
 				FB2749C2238D50B10002199B /* Info.plist */,
+				FB2749CA238D58370002199B /* CalculadoraModelo.swift */,
 			);
 			path = "Calculadora IOS";
 			sourceTree = "<group>";
@@ -135,7 +138,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB2749B9238D50B00002199B /* ViewController.swift in Sources */,
+				FB2749CB238D58370002199B /* CalculadoraModelo.swift in Sources */,
+				FB2749B9238D50B00002199B /* CalculadoraViewController.swift in Sources */,
 				FB2749B7238D50B00002199B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
